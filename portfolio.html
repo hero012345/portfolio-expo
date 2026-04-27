@@ -1,1708 +1,1803 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Astra - خدمة كتابة البحوث الجامعية الأكاديمية | احترافية وجودة عالية
-    </title>
-    <meta
-      name="description"
-      content="خدمة كتابة وتصميم البحوث الجامعية بشكل احترافي - سرعة في الإنجاز، دقة في العمل، أسعار مناسبة"
-    />
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astra - خدمة كتابة البحوث الجامعية الأكاديمية | احترافية وجودة عالية</title>
+    <meta name="description" content="خدمة كتابة وتصميم البحوث الجامعية بشكل احترافي - سرعة في الإنجاز، دقة في العمل، أسعار مناسبة">
+    
     <!-- Google Fonts - Arabic Support -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700&display=swap"
-      rel="stylesheet"
-    />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
     <!-- Font Awesome for Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      :root {
-        --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-        --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-        --dark-gradient: linear-gradient(135deg, #2d3561 0%, #1e1e2e 100%);
-        --primary-color: #667eea;
-        --secondary-color: #764ba2;
-        --accent-color: #4facfe;
-        --text-dark: #2d3561;
-        --text-light: #666;
-        --bg-light: #f8f9ff;
-        --white: #ffffff;
-        --shadow: 0 10px 40px rgba(102, 126, 234, 0.1);
-        --shadow-lg: 0 20px 60px rgba(102, 126, 234, 0.2);
-      }
-
-      body {
-        font-family: "Cairo", "Tajawal", sans-serif;
-        line-height: 1.8;
-        color: var(--text-dark);
-        background: var(--white);
-        overflow-x: hidden;
-      }
-
-      /* Navigation */
-      .navbar {
-        background: var(--white);
-        padding: 1rem 0;
-        box-shadow: var(--shadow);
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 1000;
-        transition: all 0.3s ease;
-      }
-
-      .navbar.scrolled {
-        padding: 0.5rem 0;
-        box-shadow: var(--shadow-lg);
-      }
-
-      .nav-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 2rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      .logo {
-        display: flex;
-        align-items: center;
-        gap: 0.8rem;
-        font-size: 1.8rem;
-        font-weight: 900;
-        color: var(--text-dark);
-      }
-
-      .logo-img {
-        height: 45px;
-        width: auto;
-      }
-
-      .logo-text {
-        background: var(--primary-gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-
-      .nav-menu {
-        display: flex;
-        list-style: none;
-        gap: 2rem;
-        align-items: center;
-      }
-
-      .nav-menu a {
-        text-decoration: none;
-        color: var(--text-dark);
-        font-weight: 600;
-        transition: all 0.3s ease;
-        position: relative;
-      }
-
-      .nav-menu a::after {
-        content: "";
-        position: absolute;
-        bottom: -5px;
-        right: 0;
-        width: 0;
-        height: 2px;
-        background: var(--primary-gradient);
-        transition: width 0.3s ease;
-      }
-
-      .nav-menu a:hover::after {
-        width: 100%;
-      }
-
-      .menu-toggle {
-        display: none;
-        flex-direction: column;
-        cursor: pointer;
-        gap: 5px;
-      }
-
-      .menu-toggle span {
-        width: 25px;
-        height: 3px;
-        background: var(--primary-color);
-        border-radius: 3px;
-        transition: all 0.3s ease;
-      }
-
-      /* Hero Section */
-      .hero {
-        background: var(--primary-gradient);
-        padding: 150px 2rem 100px;
-        text-align: center;
-        color: var(--white);
-        position: relative;
-        overflow: hidden;
-      }
-
-      .hero::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-        opacity: 0.3;
-      }
-
-      .hero-content {
-        max-width: 800px;
-        margin: 0 auto;
-        position: relative;
-        z-index: 1;
-      }
-
-      .hero h1 {
-        font-size: 3.5rem;
-        font-weight: 900;
-        margin-bottom: 1.5rem;
-        line-height: 1.2;
-        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-      }
-
-      .hero p {
-        font-size: 1.3rem;
-        margin-bottom: 2rem;
-        opacity: 0.95;
-      }
-
-      .stats {
-        display: flex;
-        justify-content: center;
-        gap: 3rem;
-        margin-top: 3rem;
-        flex-wrap: wrap;
-      }
-
-      .stat-item {
-        text-align: center;
-      }
-
-      .stat-number {
-        font-size: 3rem;
-        font-weight: 900;
-        display: block;
-        margin-bottom: 0.5rem;
-      }
-
-      .stat-label {
-        font-size: 1rem;
-        opacity: 0.9;
-      }
-
-      /* Buttons */
-      .btn {
-        display: inline-block;
-        padding: 1rem 2.5rem;
-        border-radius: 50px;
-        text-decoration: none;
-        font-weight: 700;
-        transition: all 0.3s ease;
-        border: none;
-        cursor: pointer;
-        font-size: 1.1rem;
-      }
-
-      .btn-primary {
-        background: var(--white);
-        color: var(--primary-color);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-      }
-
-      .btn-primary:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-      }
-
-      .btn-outline {
-        background: transparent;
-        color: var(--white);
-        border: 2px solid var(--white);
-      }
-
-      .btn-outline:hover {
-        background: var(--white);
-        color: var(--primary-color);
-      }
-
-      .btn-gradient {
-        background: var(--primary-gradient);
-        color: var(--white);
-        box-shadow: var(--shadow);
-      }
-
-      .btn-gradient:hover {
-        transform: translateY(-3px);
-        box-shadow: var(--shadow-lg);
-      }
-
-      /* Section Styles */
-      .section {
-        padding: 80px 2rem;
-      }
-
-      .section-alt {
-        background: var(--bg-light);
-      }
-
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-
-      .section-header {
-        text-align: center;
-        margin-bottom: 4rem;
-      }
-
-      .section-title {
-        font-size: 2.5rem;
-        font-weight: 900;
-        margin-bottom: 1rem;
-        background: var(--primary-gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-
-      .section-subtitle {
-        font-size: 1.2rem;
-        color: var(--text-light);
-      }
-
-      /* About Section */
-      .features-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2rem;
-        margin-top: 3rem;
-      }
-
-      .feature-card {
-        background: var(--white);
-        padding: 2.5rem 2rem;
-        border-radius: 20px;
-        text-align: center;
-        box-shadow: var(--shadow);
-        transition: all 0.3s ease;
-        border: 2px solid transparent;
-      }
-
-      .feature-card:hover {
-        transform: translateY(-10px);
-        box-shadow: var(--shadow-lg);
-        border-color: var(--primary-color);
-      }
-
-      .feature-icon {
-        width: 80px;
-        height: 80px;
-        margin: 0 auto 1.5rem;
-        background: var(--primary-gradient);
-        border-radius: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 2rem;
-        color: var(--white);
-        box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
-      }
-
-      .feature-card h3 {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-        color: var(--text-dark);
-      }
-
-      .feature-card p {
-        color: var(--text-light);
-        line-height: 1.8;
-      }
-
-      /* Services Section */
-      .services-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-      }
-
-      .service-card {
-        background: var(--white);
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: var(--shadow);
-        transition: all 0.3s ease;
-      }
-
-      .service-card:hover {
-        transform: translateY(-5px);
-        box-shadow: var(--shadow-lg);
-      }
-
-      .service-header {
-        background: var(--primary-gradient);
-        color: var(--white);
-        padding: 2rem;
-        text-align: center;
-      }
-
-      .service-header i {
-        font-size: 3rem;
-        margin-bottom: 1rem;
-      }
-
-      .service-header h3 {
-        font-size: 1.5rem;
-        margin-bottom: 0.5rem;
-      }
-
-      .service-body {
-        padding: 2rem;
-      }
-
-      .service-body ul {
-        list-style: none;
-      }
-
-      .service-body li {
-        padding: 0.8rem 0;
-        border-bottom: 1px solid #f0f0f0;
-        display: flex;
-        align-items: center;
-      }
-
-      .service-body li:last-child {
-        border-bottom: none;
-      }
-
-      .service-body li i {
-        color: var(--primary-color);
-        margin-left: 0.5rem;
-      }
-
-      /* Pricing Section */
-      .pricing-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 2rem;
-        margin-top: 3rem;
-      }
-
-      .pricing-card {
-        background: var(--white);
-        border-radius: 20px;
-        padding: 2.5rem 2rem;
-        box-shadow: var(--shadow);
-        text-align: center;
-        transition: all 0.3s ease;
-        border: 3px solid transparent;
-        position: relative;
-      }
-
-      .pricing-card.featured {
-        border-color: var(--primary-color);
-        transform: scale(1.05);
-      }
-
-      .pricing-card.featured::before {
-        content: "الأكثر طلباً";
-        position: absolute;
-        top: -15px;
-        right: 50%;
-        transform: translateX(50%);
-        background: var(--primary-gradient);
-        color: var(--white);
-        padding: 0.5rem 1.5rem;
-        border-radius: 50px;
-        font-size: 0.9rem;
-        font-weight: 700;
-      }
-
-      .pricing-card:hover {
-        transform: translateY(-10px);
-        box-shadow: var(--shadow-lg);
-      }
-
-      .pricing-card.featured:hover {
-        transform: translateY(-10px) scale(1.05);
-      }
-
-      .pricing-header h3 {
-        font-size: 1.8rem;
-        margin-bottom: 1rem;
-        color: var(--text-dark);
-      }
-
-      .price {
-        font-size: 3rem;
-        font-weight: 900;
-        background: var(--primary-gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        margin-bottom: 0.5rem;
-      }
-
-      .price-unit {
-        font-size: 1rem;
-        color: var(--text-light);
-        display: block;
-        margin-bottom: 2rem;
-      }
-
-      .pricing-features {
-        list-style: none;
-        margin: 2rem 0;
-        text-align: right;
-      }
-
-      .pricing-features li {
-        padding: 0.8rem 0;
-        border-bottom: 1px solid #f0f0f0;
-      }
-
-      .pricing-features li i {
-        color: var(--primary-color);
-        margin-left: 0.5rem;
-      }
-
-      /* Portfolio Section */
-      .portfolio-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-      }
-
-      .portfolio-item {
-        background: var(--white);
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: var(--shadow);
-        transition: all 0.3s ease;
-      }
-
-      .portfolio-item:hover {
-        transform: translateY(-10px);
-        box-shadow: var(--shadow-lg);
-      }
-
-      .portfolio-image {
-        width: 100%;
-        height: 250px;
-        background: var(--primary-gradient);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--white);
-        font-size: 4rem;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .portfolio-image::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: url('data:image/svg+xml,<svg width="50" height="50" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="dots" width="50" height="50" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="2" fill="rgba(255,255,255,0.2)"/></pattern></defs><rect width="50" height="50" fill="url(%23dots)"/></svg>');
-      }
-
-      .portfolio-content {
-        padding: 2rem;
-      }
-
-      .portfolio-content h3 {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-        color: var(--text-dark);
-      }
-
-      .portfolio-content p {
-        color: var(--text-light);
-        margin-bottom: 1rem;
-      }
-
-      .portfolio-tag {
-        display: inline-block;
-        background: var(--bg-light);
-        color: var(--primary-color);
-        padding: 0.4rem 1rem;
-        border-radius: 20px;
-        font-size: 0.9rem;
-        margin-left: 0.5rem;
-        margin-bottom: 0.5rem;
-      }
-
-      /* Testimonials Section */
-      .testimonials-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-      }
-
-      .testimonial-card {
-        background: var(--white);
-        padding: 2.5rem 2rem;
-        border-radius: 20px;
-        box-shadow: var(--shadow);
-        position: relative;
-        transition: all 0.3s ease;
-      }
-
-      .testimonial-card:hover {
-        transform: translateY(-5px);
-        box-shadow: var(--shadow-lg);
-      }
-
-      .testimonial-card::before {
-        content: '"';
-        font-size: 5rem;
-        position: absolute;
-        top: 10px;
-        right: 20px;
-        background: var(--primary-gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        opacity: 0.3;
-        font-family: Georgia, serif;
-      }
-
-      .stars {
-        color: #ffc107;
-        font-size: 1.2rem;
-        margin-bottom: 1rem;
-      }
-
-      .testimonial-text {
-        color: var(--text-light);
-        line-height: 1.8;
-        margin-bottom: 1.5rem;
-        position: relative;
-      }
-
-      .testimonial-author {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-      }
-
-      .author-avatar {
-        width: 50px;
-        height: 50px;
-        background: var(--primary-gradient);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--white);
-        font-weight: 700;
-        font-size: 1.2rem;
-      }
-
-      .author-info h4 {
-        font-size: 1.1rem;
-        color: var(--text-dark);
-        margin-bottom: 0.2rem;
-      }
-
-      .author-info p {
-        font-size: 0.9rem;
-        color: var(--text-light);
-      }
-
-      /* Contact Section */
-      .contact-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 3rem;
-        align-items: center;
-      }
-
-      .contact-methods {
-        display: grid;
-        gap: 1.5rem;
-      }
-
-      .contact-method {
-        display: flex;
-        align-items: center;
-        gap: 1.5rem;
-        background: var(--white);
-        padding: 1.5rem;
-        border-radius: 15px;
-        box-shadow: var(--shadow);
-        transition: all 0.3s ease;
-        text-decoration: none;
-        color: var(--text-dark);
-      }
-
-      .contact-method:hover {
-        transform: translateX(-10px);
-        box-shadow: var(--shadow-lg);
-      }
-
-      .contact-icon {
-        width: 60px;
-        height: 60px;
-        border-radius: 15px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.8rem;
-        color: var(--white);
-        flex-shrink: 0;
-      }
-
-      .contact-icon.whatsapp {
-        background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
-      }
-
-      .contact-icon.messenger {
-        background: linear-gradient(135deg, #00b2ff 0%, #006aff 100%);
-      }
-
-      .contact-icon.phone {
-        background: var(--primary-gradient);
-      }
-
-      .contact-icon.email {
-        background: linear-gradient(135deg, #ea4335 0%, #fbbc05 100%);
-      }
-
-      .contact-info h4 {
-        font-size: 1.2rem;
-        margin-bottom: 0.3rem;
-      }
-
-      .contact-info p {
-        color: var(--text-light);
-        font-size: 0.95rem;
-      }
-
-      .contact-cta {
-        background: var(--primary-gradient);
-        padding: 3rem;
-        border-radius: 20px;
-        color: var(--white);
-        text-align: center;
-      }
-
-      .contact-cta h3 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-      }
-
-      .contact-cta p {
-        font-size: 1.1rem;
-        margin-bottom: 2rem;
-        opacity: 0.95;
-      }
-
-      /* Footer */
-      .footer {
-        background: var(--dark-gradient);
-        color: var(--white);
-        padding: 3rem 2rem 1.5rem;
-        text-align: center;
-      }
-
-      .footer-content {
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-
-      .footer-logo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-        font-size: 2rem;
-        font-weight: 900;
-        margin-bottom: 1rem;
-      }
-
-      .footer-logo img {
-        height: 50px;
-        width: auto;
-        filter: brightness(0) invert(1);
-      }
-
-      .footer p {
-        opacity: 0.8;
-        margin-bottom: 2rem;
-      }
-
-      .social-links {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-        margin-bottom: 2rem;
-      }
-
-      .social-link {
-        width: 45px;
-        height: 45px;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--white);
-        text-decoration: none;
-        transition: all 0.3s ease;
-      }
-
-      .social-link:hover {
-        background: var(--white);
-        color: var(--primary-color);
-        transform: translateY(-5px);
-      }
-
-      .footer-bottom {
-        padding-top: 2rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        opacity: 0.7;
-      }
-
-      /* Floating Contact Buttons */
-      .floating-contacts {
-        position: fixed;
-        bottom: 30px;
-        left: 30px;
-        z-index: 999;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-      }
-
-      .floating-btn {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--white);
-        font-size: 1.8rem;
-        text-decoration: none;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-        transition: all 0.3s ease;
-        animation: pulse 2s infinite;
-      }
-
-      .floating-btn:hover {
-        transform: scale(1.1);
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
-      }
-
-      .floating-btn.whatsapp {
-        background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
-      }
-
-      .floating-btn.messenger {
-        background: linear-gradient(135deg, #00b2ff 0%, #006aff 100%);
-      }
-
-      @keyframes pulse {
-        0%,
-        100% {
-          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        50% {
-          box-shadow: 0 5px 30px rgba(102, 126, 234, 0.6);
+        
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --dark-gradient: linear-gradient(135deg, #2d3561 0%, #1e1e2e 100%);
+            --primary-color: #667eea;
+            --secondary-color: #764ba2;
+            --accent-color: #4facfe;
+            --text-dark: #2d3561;
+            --text-light: #666;
+            --bg-light: #f8f9ff;
+            --white: #ffffff;
+            --shadow: 0 10px 40px rgba(102, 126, 234, 0.1);
+            --shadow-lg: 0 20px 60px rgba(102, 126, 234, 0.2);
         }
-      }
-
-      /* Responsive Design */
-      @media (max-width: 968px) {
-        .nav-menu {
-          position: fixed;
-          right: -100%;
-          top: 70px;
-          flex-direction: column;
-          background: var(--white);
-          width: 100%;
-          text-align: center;
-          transition: 0.3s;
-          box-shadow: var(--shadow-lg);
-          padding: 2rem 0;
+        
+        body {
+            font-family: 'Cairo', 'Tajawal', sans-serif;
+            line-height: 1.8;
+            color: var(--text-dark);
+            background: var(--white);
+            overflow-x: hidden;
         }
-
-        .nav-menu.active {
-          right: 0;
+        
+        /* Navigation */
+        .navbar {
+            background: var(--white);
+            padding: 1rem 0;
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
         }
-
-        .menu-toggle {
-          display: flex;
+        
+        .navbar.scrolled {
+            padding: 0.5rem 0;
+            box-shadow: var(--shadow-lg);
         }
-
-        .hero h1 {
-          font-size: 2.5rem;
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-
-        .stats {
-          gap: 2rem;
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--text-dark);
         }
-
-        .stat-number {
-          font-size: 2.5rem;
-        }
-
-        .contact-content {
-          grid-template-columns: 1fr;
-        }
-
-        .section-title {
-          font-size: 2rem;
-        }
-
-        .floating-contacts {
-          left: 20px;
-          bottom: 20px;
-        }
-
-        .floating-btn {
-          width: 50px;
-          height: 50px;
-          font-size: 1.5rem;
-        }
-      }
-
-      @media (max-width: 600px) {
-        .hero h1 {
-          font-size: 2rem;
-        }
-
-        .hero p {
-          font-size: 1.1rem;
-        }
-
-        .features-grid,
-        .services-grid,
-        .pricing-grid,
-        .portfolio-grid,
-        .testimonials-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .pricing-card.featured {
-          transform: scale(1);
-        }
-
-        .pricing-card.featured:hover {
-          transform: translateY(-10px) scale(1);
-        }
-
-        .btn {
-          padding: 0.8rem 2rem;
-          font-size: 1rem;
-        }
-
+        
         .logo-img {
-          height: 35px;
+            height: 45px;
+            width: auto;
         }
-      }
-
-      /* Animations */
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(30px);
+        
+        .logo-text {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
-        to {
-          opacity: 1;
-          transform: translateY(0);
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
         }
-      }
-
-      .fade-in-up {
-        animation: fadeInUp 0.6s ease-out;
-      }
-
-      /* Scroll behavior */
-      html {
-        scroll-behavior: smooth;
-      }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-gradient);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+        
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+        
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary-color);
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: var(--primary-gradient);
+            padding: 150px 2rem 100px;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 900;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+        
+        .btn-primary {
+            background: var(--white);
+            color: var(--primary-color);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        
+        .btn-outline:hover {
+            background: var(--white);
+            color: var(--primary-color);
+        }
+        
+        .btn-gradient {
+            background: var(--primary-gradient);
+            color: var(--white);
+            box-shadow: var(--shadow);
+        }
+        
+        .btn-gradient:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        /* Section Styles */
+        .section {
+            padding: 80px 2rem;
+        }
+        
+        .section-alt {
+            background: var(--bg-light);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-light);
+        }
+        
+        /* About Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .feature-card {
+            background: var(--white);
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-color);
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background: var(--primary-gradient);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--white);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+        
+        .feature-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+        
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .service-header {
+            background: var(--primary-gradient);
+            color: var(--white);
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .service-header i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .service-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .service-body {
+            padding: 2rem;
+        }
+        
+        .service-body ul {
+            list-style: none;
+        }
+        
+        .service-body li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .service-body li:last-child {
+            border-bottom: none;
+        }
+        
+        .service-body li i {
+            color: var(--primary-color);
+            margin-left: 0.5rem;
+        }
+        
+        /* Pricing Section */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .pricing-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
+            position: relative;
+        }
+        
+        .pricing-card.featured {
+            border-color: var(--primary-color);
+            transform: scale(1.05);
+        }
+        
+        .pricing-card.featured::before {
+            content: 'الأكثر طلباً';
+            position: absolute;
+            top: -15px;
+            right: 50%;
+            transform: translateX(50%);
+            background: var(--primary-gradient);
+            color: var(--white);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .pricing-card.featured:hover {
+            transform: translateY(-10px) scale(1.05);
+        }
+        
+        .pricing-header h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+        
+        .price {
+            font-size: 3rem;
+            font-weight: 900;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        .price-unit {
+            font-size: 1rem;
+            color: var(--text-light);
+            display: block;
+            margin-bottom: 2rem;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin: 2rem 0;
+            text-align: right;
+        }
+        
+        .pricing-features li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .pricing-features li i {
+            color: var(--primary-color);
+            margin-left: 0.5rem;
+        }
+        
+        /* Portfolio Section */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        
+        .portfolio-item {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .portfolio-image {
+            width: 100%;
+            height: 220px;
+            background: var(--primary-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .portfolio-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="50" height="50" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="dots" width="50" height="50" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="2" fill="rgba(255,255,255,0.2)"/></pattern></defs><rect width="50" height="50" fill="url(%23dots)"/></svg>');
+        }
+        
+        .portfolio-content {
+            padding: 2rem;
+        }
+        
+        .portfolio-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        
+        .portfolio-content p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+        
+        .portfolio-tag {
+            display: inline-block;
+            background: var(--bg-light);
+            color: var(--primary-color);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-left: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .portfolio-action {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .view-btn {
+            background: var(--primary-gradient);
+            color: var(--white);
+            padding: 0.6rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .view-btn:hover {
+            transform: translateX(-5px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+        
+        /* PDF Modal */
+        .pdf-modal {
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            overflow: auto;
+        }
+        
+        .pdf-modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            position: relative;
+            width: 90%;
+            max-width: 1000px;
+            height: 90vh;
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+        
+        .modal-header {
+            background: var(--primary-gradient);
+            color: var(--white);
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .modal-header h3 {
+            font-size: 1.3rem;
+            margin: 0;
+        }
+        
+        .close-modal {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: var(--white);
+            font-size: 2rem;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .close-modal:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(90deg);
+        }
+        
+        .pdf-viewer {
+            width: 100%;
+            height: calc(90vh - 80px);
+            border: none;
+        }
+        
+        .no-download-notice {
+            background: #fff3cd;
+            color: #856404;
+            padding: 0.8rem;
+            text-align: center;
+            font-size: 0.9rem;
+            border-top: 2px solid #ffc107;
+        }
+        
+        /* Testimonials Section */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial-card {
+            background: var(--white);
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            font-size: 5rem;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            opacity: 0.3;
+            font-family: Georgia, serif;
+        }
+        
+        .stars {
+            color: #ffc107;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .testimonial-text {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        
+        .author-info h4 {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            margin-bottom: 0.2rem;
+        }
+        
+        .author-info p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        /* Contact Section */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .contact-methods {
+            display: grid;
+            gap: 1.5rem;
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--text-dark);
+        }
+        
+        .contact-method:hover {
+            transform: translateX(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--white);
+            flex-shrink: 0;
+        }
+        
+        .contact-icon.whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+        }
+        
+        .contact-icon.messenger {
+            background: linear-gradient(135deg, #00B2FF 0%, #006AFF 100%);
+        }
+        
+        .contact-icon.phone {
+            background: var(--primary-gradient);
+        }
+        
+        .contact-icon.email {
+            background: linear-gradient(135deg, #EA4335 0%, #FBBC05 100%);
+        }
+        
+        .contact-info h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+        }
+        
+        .contact-info p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+        
+        .contact-cta {
+            background: var(--primary-gradient);
+            padding: 3rem;
+            border-radius: 20px;
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .contact-cta h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-cta p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--dark-gradient);
+            color: var(--white);
+            padding: 3rem 2rem 1.5rem;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            font-size: 2rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-logo img {
+            height: 50px;
+            width: auto;
+            filter: brightness(0) invert(1);
+        }
+        
+        .footer p {
+            opacity: 0.8;
+            margin-bottom: 2rem;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .social-link {
+            width: 45px;
+            height: 45px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background: var(--white);
+            color: var(--primary-color);
+            transform: translateY(-5px);
+        }
+        
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            opacity: 0.7;
+        }
+        
+        /* Floating Contact Buttons */
+        .floating-contacts {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .floating-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.8rem;
+            text-decoration: none;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        
+        .floating-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+        }
+        
+        .floating-btn.whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+        }
+        
+        .floating-btn.messenger {
+            background: linear-gradient(135deg, #00B2FF 0%, #006AFF 100%);
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            }
+            50% {
+                box-shadow: 0 5px 30px rgba(102, 126, 234, 0.6);
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .nav-menu {
+                position: fixed;
+                right: -100%;
+                top: 70px;
+                flex-direction: column;
+                background: var(--white);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: var(--shadow-lg);
+                padding: 2rem 0;
+            }
+            
+            .nav-menu.active {
+                right: 0;
+            }
+            
+            .menu-toggle {
+                display: flex;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .stats {
+                gap: 2rem;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+            
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .floating-contacts {
+                left: 20px;
+                bottom: 20px;
+            }
+            
+            .floating-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+            
+            .modal-content {
+                width: 95%;
+                height: 95vh;
+            }
+            
+            .pdf-viewer {
+                height: calc(95vh - 80px);
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .features-grid,
+            .services-grid,
+            .pricing-grid,
+            .portfolio-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+            
+            .pricing-card.featured:hover {
+                transform: translateY(-10px) scale(1);
+            }
+            
+            .btn {
+                padding: 0.8rem 2rem;
+                font-size: 1rem;
+            }
+            
+            .logo-img {
+                height: 35px;
+            }
+            
+            .modal-header h3 {
+                font-size: 1rem;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        /* Scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
-      <div class="nav-container">
-        <div class="logo">
-          <img
-            src="https://i.ibb.co/GvsCGcwL/astra-pic.jpg"
-            alt="Astra Logo"
-            class="logo-img"
-          />
-          <span class="logo-text">Astra</span>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="https://i.ibb.co/mCvhd6s/astra-logo.png" alt="Astra Logo" class="logo-img">
+                <span class="logo-text">Astra</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#about">عن الخدمة</a></li>
+                <li><a href="#services">الخدمات</a></li>
+                <li><a href="#pricing">الأسعار</a></li>
+                <li><a href="#portfolio">أعمالنا</a></li>
+                <li><a href="#testimonials">آراء العملاء</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-        <ul class="nav-menu" id="navMenu">
-          <li><a href="#home">الرئيسية</a></li>
-          <li><a href="#about">عن الخدمة</a></li>
-          <li><a href="#services">الخدمات</a></li>
-          <li><a href="#pricing">الأسعار</a></li>
-          <li><a href="#portfolio">أعمالنا</a></li>
-          <li><a href="#testimonials">آراء العملاء</a></li>
-          <li><a href="#contact">تواصل معنا</a></li>
-        </ul>
-        <div class="menu-toggle" id="menuToggle">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-      <div class="hero-content fade-in-up">
-        <h1>كتابة البحوث الجامعية بشكل احترافي</h1>
-        <p>
-          نقدم لك بحوثاً علمية عالية الجودة مع تصميم احترافي وبنية قوية - سرعة
-          في الإنجاز ودقة في العمل
-        </p>
-        <div
-          style="
-            margin-top: 2rem;
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-          "
-        >
-          <a href="#contact" class="btn btn-primary">
-            <i class="fas fa-paper-plane"></i> اطلب الآن
-          </a>
-          <a href="#pricing" class="btn btn-outline">
-            <i class="fas fa-tag"></i> اعرف الأسعار
-          </a>
+        <div class="hero-content fade-in-up">
+            <h1>كتابة البحوث الجامعية بشكل احترافي</h1>
+            <p>نقدم لك بحوثاً علمية عالية الجودة مع تصميم احترافي وبنية قوية - سرعة في الإنجاز ودقة في العمل</p>
+            <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="#contact" class="btn btn-primary">
+                    <i class="fas fa-paper-plane"></i> اطلب الآن
+                </a>
+                <a href="#pricing" class="btn btn-outline">
+                    <i class="fas fa-tag"></i> اعرف الأسعار
+                </a>
+            </div>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number">25+</span>
+                    <span class="stat-label">بحث منجز</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">رضا العملاء</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">خدمة متواصلة</span>
+                </div>
+            </div>
         </div>
-
-        <div class="stats">
-          <div class="stat-item">
-            <span class="stat-number">25+</span>
-            <span class="stat-label">بحث منجز</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">100%</span>
-            <span class="stat-label">رضا العملاء</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">24/7</span>
-            <span class="stat-label">خدمة متواصلة</span>
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- About Section -->
     <section class="section" id="about">
-      <div class="container">
-        <div class="section-header fade-in-up">
-          <h2 class="section-title">لماذا تختارنا؟</h2>
-          <p class="section-subtitle">
-            نقدم لك خدمة متكاملة لكتابة البحوث الجامعية بأعلى معايير الجودة
-          </p>
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">لماذا تختارنا؟</h2>
+                <p class="section-subtitle">نقدم لك خدمة متكاملة لكتابة البحوث الجامعية بأعلى معايير الجودة</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card fade-in-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>سرعة في الإنجاز</h3>
+                    <p>نلتزم بالمواعيد النهائية ونضمن تسليم بحثك في الوقت المحدد دون تأخير</p>
+                </div>
+                
+                <div class="feature-card fade-in-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>دقة في العمل</h3>
+                    <p>كل بحث يمر بمراجعة دقيقة لضمان خلوه من الأخطاء اللغوية والعلمية</p>
+                </div>
+                
+                <div class="feature-card fade-in-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>بنية قوية ومتماسكة</h3>
+                    <p>تنظيم محكم للأفكار مع مقدمة جذابة، محتوى منطقي، وخاتمة شاملة</p>
+                </div>
+                
+                <div class="feature-card fade-in-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>جميع التخصصات</h3>
+                    <p>نغطي كافة المجالات الأكاديمية من العلوم الإنسانية إلى العلوم التطبيقية</p>
+                </div>
+                
+                <div class="feature-card fade-in-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>تصميم احترافي</h3>
+                    <p>تنسيق جذاب وتصميم عصري يتماشى مع المعايير الأكاديمية</p>
+                </div>
+                
+                <div class="feature-card fade-in-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>أسعار مناسبة</h3>
+                    <p>أسعار تنافسية تناسب ميزانية الطلاب مع خصومات على الطلبات الكبيرة</p>
+                </div>
+            </div>
         </div>
-
-        <div class="features-grid">
-          <div class="feature-card fade-in-up">
-            <div class="feature-icon">
-              <i class="fas fa-rocket"></i>
-            </div>
-            <h3>سرعة في الإنجاز</h3>
-            <p>
-              نلتزم بالمواعيد النهائية ونضمن تسليم بحثك في الوقت المحدد دون
-              تأخير
-            </p>
-          </div>
-
-          <div class="feature-card fade-in-up">
-            <div class="feature-icon">
-              <i class="fas fa-check-circle"></i>
-            </div>
-            <h3>دقة في العمل</h3>
-            <p>
-              كل بحث يمر بمراجعة دقيقة لضمان خلوه من الأخطاء اللغوية والعلمية
-            </p>
-          </div>
-
-          <div class="feature-card fade-in-up">
-            <div class="feature-icon">
-              <i class="fas fa-layer-group"></i>
-            </div>
-            <h3>بنية قوية ومتماسكة</h3>
-            <p>تنظيم محكم للأفكار مع مقدمة جذابة، محتوى منطقي، وخاتمة شاملة</p>
-          </div>
-
-          <div class="feature-card fade-in-up">
-            <div class="feature-icon">
-              <i class="fas fa-book"></i>
-            </div>
-            <h3>جميع التخصصات</h3>
-            <p>
-              نغطي كافة المجالات الأكاديمية من العلوم الإنسانية إلى العلوم
-              التطبيقية
-            </p>
-          </div>
-
-          <div class="feature-card fade-in-up">
-            <div class="feature-icon">
-              <i class="fas fa-palette"></i>
-            </div>
-            <h3>تصميم احترافي</h3>
-            <p>تنسيق جذاب وتصميم عصري يتماشى مع المعايير الأكاديمية</p>
-          </div>
-
-          <div class="feature-card fade-in-up">
-            <div class="feature-icon">
-              <i class="fas fa-dollar-sign"></i>
-            </div>
-            <h3>أسعار مناسبة</h3>
-            <p>
-              أسعار تنافسية تناسب ميزانية الطلاب مع خصومات على الطلبات الكبيرة
-            </p>
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- Services Section -->
     <section class="section section-alt" id="services">
-      <div class="container">
-        <div class="section-header fade-in-up">
-          <h2 class="section-title">خدماتنا الشاملة</h2>
-          <p class="section-subtitle">كل ما تحتاجه لبحث أكاديمي متكامل</p>
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">خدماتنا الشاملة</h2>
+                <p class="section-subtitle">كل ما تحتاجه لبحث أكاديمي متكامل</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card fade-in-up">
+                    <div class="service-header">
+                        <i class="fas fa-pen-fancy"></i>
+                        <h3>كتابة البحوث</h3>
+                    </div>
+                    <div class="service-body">
+                        <ul>
+                            <li><i class="fas fa-check"></i> كتابة بحث كامل من الصفر</li>
+                            <li><i class="fas fa-check"></i> صياغة أكاديمية احترافية</li>
+                            <li><i class="fas fa-check"></i> التزام بالمنهجية العلمية</li>
+                            <li><i class="fas fa-check"></i> توثيق المراجع بشكل صحيح</li>
+                            <li><i class="fas fa-check"></i> محتوى أصلي خالي من الانتحال</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card fade-in-up">
+                    <div class="service-header" style="background: var(--accent-gradient);">
+                        <i class="fas fa-magic"></i>
+                        <h3>التصميم والتنسيق</h3>
+                    </div>
+                    <div class="service-body">
+                        <ul>
+                            <li><i class="fas fa-check"></i> تصميم غلاف احترافي جذاب</li>
+                            <li><i class="fas fa-check"></i> تنسيق النصوص والعناوين</li>
+                            <li><i class="fas fa-check"></i> إضافة جداول ورسومات بيانية</li>
+                            <li><i class="fas fa-check"></i> فهرس محتويات تفاعلي</li>
+                            <li><i class="fas fa-check"></i> ترقيم الصفحات بشكل صحيح</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card fade-in-up">
+                    <div class="service-header" style="background: var(--secondary-gradient);">
+                        <i class="fas fa-tasks"></i>
+                        <h3>المراجعة والتدقيق</h3>
+                    </div>
+                    <div class="service-body">
+                        <ul>
+                            <li><i class="fas fa-check"></i> تدقيق لغوي شامل</li>
+                            <li><i class="fas fa-check"></i> مراجعة علمية للمحتوى</li>
+                            <li><i class="fas fa-check"></i> تصحيح الأخطاء النحوية</li>
+                            <li><i class="fas fa-check"></i> التأكد من التنسيق الموحد</li>
+                            <li><i class="fas fa-check"></i> مراجعة نهائية قبل التسليم</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="services-grid">
-          <div class="service-card fade-in-up">
-            <div class="service-header">
-              <i class="fas fa-pen-fancy"></i>
-              <h3>كتابة البحوث</h3>
-            </div>
-            <div class="service-body">
-              <ul>
-                <li><i class="fas fa-check"></i> كتابة بحث كامل من الصفر</li>
-                <li><i class="fas fa-check"></i> صياغة أكاديمية احترافية</li>
-                <li><i class="fas fa-check"></i> التزام بالمنهجية العلمية</li>
-                <li><i class="fas fa-check"></i> توثيق المراجع بشكل صحيح</li>
-                <li>
-                  <i class="fas fa-check"></i> محتوى أصلي خالي من الانتحال
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="service-card fade-in-up">
-            <div
-              class="service-header"
-              style="background: var(--accent-gradient)"
-            >
-              <i class="fas fa-magic"></i>
-              <h3>التصميم والتنسيق</h3>
-            </div>
-            <div class="service-body">
-              <ul>
-                <li><i class="fas fa-check"></i> تصميم غلاف احترافي جذاب</li>
-                <li><i class="fas fa-check"></i> تنسيق النصوص والعناوين</li>
-                <li><i class="fas fa-check"></i> إضافة جداول ورسومات بيانية</li>
-                <li><i class="fas fa-check"></i> فهرس محتويات تفاعلي</li>
-                <li><i class="fas fa-check"></i> ترقيم الصفحات بشكل صحيح</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="service-card fade-in-up">
-            <div
-              class="service-header"
-              style="background: var(--secondary-gradient)"
-            >
-              <i class="fas fa-tasks"></i>
-              <h3>المراجعة والتدقيق</h3>
-            </div>
-            <div class="service-body">
-              <ul>
-                <li><i class="fas fa-check"></i> تدقيق لغوي شامل</li>
-                <li><i class="fas fa-check"></i> مراجعة علمية للمحتوى</li>
-                <li><i class="fas fa-check"></i> تصحيح الأخطاء النحوية</li>
-                <li><i class="fas fa-check"></i> التأكد من التنسيق الموحد</li>
-                <li><i class="fas fa-check"></i> مراجعة نهائية قبل التسليم</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- Pricing Section -->
     <section class="section" id="pricing">
-      <div class="container">
-        <div class="section-header fade-in-up">
-          <h2 class="section-title">أسعار شفافة وتنافسية</h2>
-          <p class="section-subtitle">
-            اختر الباقة المناسبة لك مع خصومات على الطلبات الكبيرة
-          </p>
-        </div>
-
-        <div class="pricing-grid">
-          <div class="pricing-card fade-in-up">
-            <div class="pricing-header">
-              <h3>الباقة الأساسية</h3>
-              <div class="price">60 دج</div>
-              <span class="price-unit">لكل صفحتين</span>
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">أسعار شفافة وتنافسية</h2>
+                <p class="section-subtitle">اختر الباقة المناسبة لك مع خصومات على الطلبات الكبيرة</p>
             </div>
-            <ul class="pricing-features">
-              <li><i class="fas fa-check"></i> كتابة صفحتين</li>
-              <li><i class="fas fa-check"></i> تصميم أساسي</li>
-              <li><i class="fas fa-check"></i> تنسيق نصوص</li>
-              <li><i class="fas fa-check"></i> مراجعة لغوية</li>
-              <li><i class="fas fa-check"></i> تسليم في 24 ساعة</li>
-            </ul>
-            <a href="#contact" class="btn btn-gradient">اطلب الآن</a>
-          </div>
-
-          <div class="pricing-card featured fade-in-up">
-            <div class="pricing-header">
-              <h3>باقة متوسطة (خصم 10%)</h3>
-              <div class="price">270 دج</div>
-              <span class="price-unit">5 صفحات (بدلاً من 300 دج)</span>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card fade-in-up">
+                    <div class="pricing-header">
+                        <h3>الباقة الأساسية</h3>
+                        <div class="price">60 دج</div>
+                        <span class="price-unit">لكل صفحتين</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> كتابة صفحتين</li>
+                        <li><i class="fas fa-check"></i> تصميم أساسي</li>
+                        <li><i class="fas fa-check"></i> تنسيق نصوص</li>
+                        <li><i class="fas fa-check"></i> مراجعة لغوية</li>
+                        <li><i class="fas fa-check"></i> تسليم في 24 ساعة</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-gradient">اطلب الآن</a>
+                </div>
+                
+                <div class="pricing-card featured fade-in-up">
+                    <div class="pricing-header">
+                        <h3>باقة متوسطة (خصم 10%)</h3>
+                        <div class="price">270 دج</div>
+                        <span class="price-unit">5 صفحات (بدلاً من 300 دج)</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> كتابة 5 صفحات</li>
+                        <li><i class="fas fa-check"></i> تصميم احترافي متقدم</li>
+                        <li><i class="fas fa-check"></i> تنسيق كامل</li>
+                        <li><i class="fas fa-check"></i> مراجعة لغوية وعلمية</li>
+                        <li><i class="fas fa-check"></i> غلاف احترافي</li>
+                        <li><i class="fas fa-check"></i> فهرس محتويات</li>
+                        <li><i class="fas fa-check"></i> توثيق المراجع</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-gradient">اطلب الآن</a>
+                </div>
+                
+                <div class="pricing-card fade-in-up">
+                    <div class="pricing-header">
+                        <h3>باقة كبيرة (خصم 15%)</h3>
+                        <div class="price">510 دج</div>
+                        <span class="price-unit">10 صفحات (بدلاً من 600 دج)</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> كتابة 10 صفحات</li>
+                        <li><i class="fas fa-check"></i> تصميم حصري فاخر</li>
+                        <li><i class="fas fa-check"></i> تنسيق متقدم</li>
+                        <li><i class="fas fa-check"></i> مراجعة شاملة</li>
+                        <li><i class="fas fa-check"></i> غلاف مخصص</li>
+                        <li><i class="fas fa-check"></i> جداول ورسومات بيانية</li>
+                        <li><i class="fas fa-check"></i> دعم فني مميز</li>
+                        <li><i class="fas fa-check"></i> تعديلات مجانية</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-gradient">اطلب الآن</a>
+                </div>
             </div>
-            <ul class="pricing-features">
-              <li><i class="fas fa-check"></i> كتابة 5 صفحات</li>
-              <li><i class="fas fa-check"></i> تصميم احترافي متقدم</li>
-              <li><i class="fas fa-check"></i> تنسيق كامل</li>
-              <li><i class="fas fa-check"></i> مراجعة لغوية وعلمية</li>
-              <li><i class="fas fa-check"></i> غلاف احترافي</li>
-              <li><i class="fas fa-check"></i> فهرس محتويات</li>
-              <li><i class="fas fa-check"></i> توثيق المراجع</li>
-            </ul>
-            <a href="#contact" class="btn btn-gradient">اطلب الآن</a>
-          </div>
-
-          <div class="pricing-card fade-in-up">
-            <div class="pricing-header">
-              <h3>باقة كبيرة (خصم 15%)</h3>
-              <div class="price">510 دج</div>
-              <span class="price-unit">10 صفحات (بدلاً من 600 دج)</span>
+            
+            <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: var(--bg-light); border-radius: 15px;">
+                <h3 style="margin-bottom: 1rem; color: var(--primary-color);">
+                    <i class="fas fa-gift"></i> عروض خاصة
+                </h3>
+                <p style="color: var(--text-light); font-size: 1.1rem;">
+                    احصل على خصومات إضافية عند طلب أكثر من 15 صفحة - تواصل معنا لمعرفة التفاصيل
+                </p>
             </div>
-            <ul class="pricing-features">
-              <li><i class="fas fa-check"></i> كتابة 10 صفحات</li>
-              <li><i class="fas fa-check"></i> تصميم حصري فاخر</li>
-              <li><i class="fas fa-check"></i> تنسيق متقدم</li>
-              <li><i class="fas fa-check"></i> مراجعة شاملة</li>
-              <li><i class="fas fa-check"></i> غلاف مخصص</li>
-              <li><i class="fas fa-check"></i> جداول ورسومات بيانية</li>
-              <li><i class="fas fa-check"></i> دعم فني مميز</li>
-              <li><i class="fas fa-check"></i> تعديلات مجانية</li>
-            </ul>
-            <a href="#contact" class="btn btn-gradient">اطلب الآن</a>
-          </div>
         </div>
-
-        <div
-          style="
-            text-align: center;
-            margin-top: 3rem;
-            padding: 2rem;
-            background: var(--bg-light);
-            border-radius: 15px;
-          "
-        >
-          <h3 style="margin-bottom: 1rem; color: var(--primary-color)">
-            <i class="fas fa-gift"></i> عروض خاصة
-          </h3>
-          <p style="color: var(--text-light); font-size: 1.1rem">
-            احصل على خصومات إضافية عند طلب أكثر من 15 صفحة - تواصل معنا لمعرفة
-            التفاصيل
-          </p>
-        </div>
-      </div>
     </section>
 
     <!-- Portfolio Section -->
     <section class="section section-alt" id="portfolio">
-      <div class="container">
-        <div class="section-header fade-in-up">
-          <h2 class="section-title">نماذج من أعمالنا</h2>
-          <p class="section-subtitle">اطلع على بعض البحوث التي قمنا بإنجازها</p>
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">نماذج من أعمالنا</h2>
+                <p class="section-subtitle">اطلع على بعض البحوث التي قمنا بإنجازها</p>
+            </div>
+            
+            <div class="portfolio-grid">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item fade-in-up">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Dossier de recherche - IA et gestion des listes d'attente</h3>
+                        <p>بحث متخصص حول الذكاء الاصطناعي وإدارة قوائم الانتظار مع تحليل معمق</p>
+                        <div class="portfolio-action">
+                            <div>
+                                <span class="portfolio-tag">ذكاء اصطناعي</span>
+                                <span class="portfolio-tag">تقني</span>
+                            </div>
+                            <a href="#" class="view-btn" onclick="openPDF('pdfs/ia-gestion-listes.pdf', 'Dossier de recherche - IA et gestion des listes d\'attente'); return false;">
+                                <i class="fas fa-eye"></i> معاينة
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item fade-in-up">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-keyboard"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>الخطوط العربية في الإعلام الآلي</h3>
+                        <p>دراسة شاملة عن الخطوط العربية واستخداماتها في الحاسوب والتكنولوجيا</p>
+                        <div class="portfolio-action">
+                            <div>
+                                <span class="portfolio-tag">إعلام آلي</span>
+                                <span class="portfolio-tag">تصميم</span>
+                            </div>
+                            <a href="#" class="view-btn" onclick="openPDF('pdfs/khoutout-arabia-ilam-ali.pdf', 'الخطوط العربية في الإعلام الآلي'); return false;">
+                                <i class="fas fa-eye"></i> معاينة
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item fade-in-up">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>القراءة التحضيرية · بحث موجز</h3>
+                        <p>بحث موجز ومركز حول القراءة التحضيرية وأهميتها في التحصيل الدراسي</p>
+                        <div class="portfolio-action">
+                            <div>
+                                <span class="portfolio-tag">تعليم</span>
+                                <span class="portfolio-tag">بحث موجز</span>
+                            </div>
+                            <a href="#" class="view-btn" onclick="openPDF('pdfs/qiraa-tahdiria.pdf', 'القراءة التحضيرية'); return false;">
+                                <i class="fas fa-eye"></i> معاينة
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 4 -->
+                <div class="portfolio-item fade-in-up">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #FA8BFF 0%, #2BD2FF 90%);">
+                        <i class="fas fa-pen-nib"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>فن المقال · البشير الإبراهيمي نموذجاً</h3>
+                        <p>دراسة أدبية تحليلية لفن المقال عند الأديب الجزائري البشير الإبراهيمي</p>
+                        <div class="portfolio-action">
+                            <div>
+                                <span class="portfolio-tag">أدب عربي</span>
+                                <span class="portfolio-tag">دراسة أدبية</span>
+                            </div>
+                            <a href="#" class="view-btn" onclick="openPDF('pdfs/fan-maqal-ibrahimi.pdf', 'فن المقال · البشير الإبراهيمي نموذجاً'); return false;">
+                                <i class="fas fa-eye"></i> معاينة
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 5 -->
+                <div class="portfolio-item fade-in-up">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>العلم والعمل · محمد البشير الإبراهيمي</h3>
+                        <p>تحليل معمق لموضوع العلم والعمل من منظور الأديب محمد البشير الإبراهيمي</p>
+                        <div class="portfolio-action">
+                            <div>
+                                <span class="portfolio-tag">فكر</span>
+                                <span class="portfolio-tag">أدب</span>
+                            </div>
+                            <a href="#" class="view-btn" onclick="openPDF('pdfs/ilm-wa-amal-ibrahimi.pdf', 'العلم والعمل · محمد البشير الإبراهيمي'); return false;">
+                                <i class="fas fa-eye"></i> معاينة
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 6 -->
+                <div class="portfolio-item fade-in-up">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                        <i class="fas fa-scroll"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>المقامة البغدادية · دراسة أدبية وبلاغية</h3>
+                        <p>دراسة أدبية وبلاغية شاملة للمقامة البغدادية مع تحليل أسلوبي دقيق</p>
+                        <div class="portfolio-action">
+                            <div>
+                                <span class="portfolio-tag">بلاغة</span>
+                                <span class="portfolio-tag">أدب كلاسيكي</span>
+                            </div>
+                            <a href="#" class="view-btn" onclick="openPDF('pdfs/maqama-baghdadia.pdf', 'المقامة البغدادية · دراسة أدبية وبلاغية'); return false;">
+                                <i class="fas fa-eye"></i> معاينة
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="portfolio-grid">
-          <div class="portfolio-item fade-in-up">
-            <div class="portfolio-image">
-              <i class="fas fa-microscope"></i>
-            </div>
-            <div class="portfolio-content">
-              <h3>بحث في علم الأحياء</h3>
-              <p>
-                بحث شامل حول التنوع البيولوجي مع تصميم علمي احترافي وتنسيق متقدم
-              </p>
-              <span class="portfolio-tag">علوم طبيعية</span>
-              <span class="portfolio-tag">20 صفحة</span>
-            </div>
-          </div>
-
-          <div class="portfolio-item fade-in-up">
-            <div
-              class="portfolio-image"
-              style="background: var(--accent-gradient)"
-            >
-              <i class="fas fa-balance-scale"></i>
-            </div>
-            <div class="portfolio-content">
-              <h3>بحث في القانون الدستوري</h3>
-              <p>دراسة قانونية معمقة مع توثيق دقيق للمراجع والنصوص القانونية</p>
-              <span class="portfolio-tag">علوم قانونية</span>
-              <span class="portfolio-tag">15 صفحة</span>
-            </div>
-          </div>
-
-          <div class="portfolio-item fade-in-up">
-            <div
-              class="portfolio-image"
-              style="background: var(--secondary-gradient)"
-            >
-              <i class="fas fa-calculator"></i>
-            </div>
-            <div class="portfolio-content">
-              <h3>بحث في الاقتصاد</h3>
-              <p>تحليل اقتصادي مدعم بالجداول والرسومات البيانية التوضيحية</p>
-              <span class="portfolio-tag">علوم اقتصادية</span>
-              <span class="portfolio-tag">12 صفحة</span>
-            </div>
-          </div>
-
-          <div class="portfolio-item fade-in-up">
-            <div
-              class="portfolio-image"
-              style="
-                background: linear-gradient(135deg, #fa8bff 0%, #2bd2ff 90%);
-              "
-            >
-              <i class="fas fa-book-open"></i>
-            </div>
-            <div class="portfolio-content">
-              <h3>بحث في الأدب العربي</h3>
-              <p>دراسة أدبية تحليلية مع صياغة راقية وأسلوب أكاديمي متميز</p>
-              <span class="portfolio-tag">علوم إنسانية</span>
-              <span class="portfolio-tag">18 صفحة</span>
-            </div>
-          </div>
-
-          <div class="portfolio-item fade-in-up">
-            <div
-              class="portfolio-image"
-              style="
-                background: linear-gradient(
-                  135deg,
-                  #ff9a8b 0%,
-                  #ff6a88 55%,
-                  #ff99ac 100%
-                );
-              "
-            >
-              <i class="fas fa-flask"></i>
-            </div>
-            <div class="portfolio-content">
-              <h3>بحث في الكيمياء التطبيقية</h3>
-              <p>بحث علمي مع تجارب ونتائج موثقة بشكل احترافي ودقيق</p>
-              <span class="portfolio-tag">علوم تطبيقية</span>
-              <span class="portfolio-tag">25 صفحة</span>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
+
+    <!-- PDF Modal -->
+    <div id="pdfModal" class="pdf-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle"></h3>
+                <button class="close-modal" onclick="closePDF()">&times;</button>
+            </div>
+            <div class="no-download-notice">
+                <i class="fas fa-info-circle"></i> يمكنك معاينة البحث فقط. للحصول على نسخة كاملة، تواصل معنا
+            </div>
+            <iframe id="pdfViewer" class="pdf-viewer"></iframe>
+        </div>
+    </div>
 
     <!-- Testimonials Section -->
     <section class="section" id="testimonials">
-      <div class="container">
-        <div class="section-header fade-in-up">
-          <h2 class="section-title">آراء عملائنا</h2>
-          <p class="section-subtitle">ماذا يقول الطلاب عن خدمتنا</p>
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">آراء عملائنا</h2>
+                <p class="section-subtitle">ماذا يقول الطلاب عن خدمتنا</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in-up">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "خدمة ممتازة جداً! البحث كان منظم بشكل رائع والتصميم احترافي. حصلت على علامة ممتازة بفضل جودة العمل."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">س.م</div>
+                        <div class="author-info">
+                            <h4>سارة محمد</h4>
+                            <p>طالبة علوم اقتصادية</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card fade-in-up">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "سرعة في الإنجاز والتزام بالموعد المحدد. البحث جاء خالي من الأخطاء ومراجع موثقة بشكل صحيح. أنصح بشدة!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">أ.ك</div>
+                        <div class="author-info">
+                            <h4>أحمد كريم</h4>
+                            <p>طالب علوم قانونية</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card fade-in-up">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "تعامل راقي واحترافية عالية. البحث فاق توقعاتي من حيث التصميم والمحتوى. السعر مناسب جداً مقارنة بالجودة."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">ف.ب</div>
+                        <div class="author-info">
+                            <h4>فاطمة بن علي</h4>
+                            <p>طالبة علوم طبيعية</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card fade-in-up">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "أفضل خدمة استخدمتها! الأسلوب الأكاديمي قوي والبنية منطقية. تم تسليم البحث قبل الموعد المحدد."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">ي.ح</div>
+                        <div class="author-info">
+                            <h4>ياسين حمزة</h4>
+                            <p>طالب أدب عربي</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card fade-in-up">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "خدمة موثوقة وأسعار معقولة. التصميم كان رائع والمحتوى دقيق. سأطلب منهم مرة أخرى بكل تأكيد!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">ن.ز</div>
+                        <div class="author-info">
+                            <h4>نورة زيدان</h4>
+                            <p>طالبة علوم اجتماعية</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card fade-in-up">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "جودة عالية واهتمام بأدق التفاصيل. الفريق متعاون جداً ويستمع لملاحظاتك. أنصح كل الطلاب بهذه الخدمة."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">م.ع</div>
+                        <div class="author-info">
+                            <h4>محمد العيد</h4>
+                            <p>طالب إعلام واتصال</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="testimonials-grid">
-          <div class="testimonial-card fade-in-up">
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <p class="testimonial-text">
-              "خدمة ممتازة جداً! البحث كان منظم بشكل رائع والتصميم احترافي. حصلت
-              على علامة ممتازة بفضل جودة العمل."
-            </p>
-            <div class="testimonial-author">
-              <div class="author-avatar">س.م</div>
-              <div class="author-info">
-                <h4>سارة محمد</h4>
-                <p>طالبة علوم اقتصادية</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card fade-in-up">
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <p class="testimonial-text">
-              "سرعة في الإنجاز والتزام بالموعد المحدد. البحث جاء خالي من الأخطاء
-              ومراجع موثقة بشكل صحيح. أنصح بشدة!"
-            </p>
-            <div class="testimonial-author">
-              <div class="author-avatar">أ.ك</div>
-              <div class="author-info">
-                <h4>أحمد كريم</h4>
-                <p>طالب علوم قانونية</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card fade-in-up">
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <p class="testimonial-text">
-              "تعامل راقي واحترافية عالية. البحث فاق توقعاتي من حيث التصميم
-              والمحتوى. السعر مناسب جداً مقارنة بالجودة."
-            </p>
-            <div class="testimonial-author">
-              <div class="author-avatar">ف.ب</div>
-              <div class="author-info">
-                <h4>فاطمة بن علي</h4>
-                <p>طالبة علوم طبيعية</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card fade-in-up">
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <p class="testimonial-text">
-              "أفضل خدمة استخدمتها! الأسلوب الأكاديمي قوي والبنية منطقية. تم
-              تسليم البحث قبل الموعد المحدد."
-            </p>
-            <div class="testimonial-author">
-              <div class="author-avatar">ي.ح</div>
-              <div class="author-info">
-                <h4>ياسين حمزة</h4>
-                <p>طالب أدب عربي</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card fade-in-up">
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <p class="testimonial-text">
-              "خدمة موثوقة وأسعار معقولة. التصميم كان رائع والمحتوى دقيق. سأطلب
-              منهم مرة أخرى بكل تأكيد!"
-            </p>
-            <div class="testimonial-author">
-              <div class="author-avatar">ن.ز</div>
-              <div class="author-info">
-                <h4>نورة زيدان</h4>
-                <p>طالبة علوم اجتماعية</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card fade-in-up">
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <p class="testimonial-text">
-              "جودة عالية واهتمام بأدق التفاصيل. الفريق متعاون جداً ويستمع
-              لملاحظاتك. أنصح كل الطلاب بهذه الخدمة."
-            </p>
-            <div class="testimonial-author">
-              <div class="author-avatar">م.ع</div>
-              <div class="author-info">
-                <h4>محمد العيد</h4>
-                <p>طالب إعلام واتصال</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- Contact Section -->
     <section class="section section-alt" id="contact">
-      <div class="container">
-        <div class="section-header fade-in-up">
-          <h2 class="section-title">تواصل معنا الآن</h2>
-          <p class="section-subtitle">نحن في خدمتك على مدار الساعة</p>
-        </div>
-
-        <div class="contact-content">
-          <div class="contact-methods fade-in-up">
-            <a
-              href="https://wa.me/213549419390"
-              class="contact-method"
-              target="_blank"
-            >
-              <div class="contact-icon whatsapp">
-                <i class="fab fa-whatsapp"></i>
-              </div>
-              <div class="contact-info">
-                <h4>واتساب</h4>
-                <p>0549419390</p>
-              </div>
-            </a>
-
-            <a
-              href="https://www.facebook.com/profile.php?id=61580854513363"
-              class="contact-method"
-              target="_blank"
-            >
-              <div class="contact-icon messenger">
-                <i class="fab fa-facebook-messenger"></i>
-              </div>
-              <div class="contact-info">
-                <h4>ماسنجر</h4>
-                <p>راسلنا عبر فيسبوك</p>
-              </div>
-            </a>
-
-            <a href="tel:0549419390" class="contact-method">
-              <div class="contact-icon phone">
-                <i class="fas fa-phone"></i>
-              </div>
-              <div class="contact-info">
-                <h4>اتصل بنا</h4>
-                <p>0549 41 93 90</p>
-              </div>
-            </a>
-
-            <a href="mailto:promaildzaier@gmail.com" class="contact-method">
-              <div class="contact-icon email">
-                <i class="fas fa-envelope"></i>
-              </div>
-              <div class="contact-info">
-                <h4>البريد الإلكتروني</h4>
-                <p>promaildzaier@gmail.com</p>
-              </div>
-            </a>
-          </div>
-
-          <div class="contact-cta fade-in-up">
-            <h3>جاهز لبدء مشروعك؟</h3>
-            <p>تواصل معنا الآن واحصل على استشارة مجانية وعرض سعر مخصص لبحثك</p>
-            <a
-              href="https://wa.me/213549419390"
-              class="btn btn-outline"
-              target="_blank"
-            >
-              <i class="fab fa-whatsapp"></i> ابدأ الآن عبر واتساب
-            </a>
-
-            <div
-              style="
-                margin-top: 2rem;
-                padding-top: 2rem;
-                border-top: 1px solid rgba(255, 255, 255, 0.2);
-              "
-            >
-              <h4 style="margin-bottom: 1rem">ساعات العمل</h4>
-              <p style="opacity: 0.9">
-                متاحون 24/7 - نرد على استفساراتك في أسرع وقت
-              </p>
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">تواصل معنا الآن</h2>
+                <p class="section-subtitle">نحن في خدمتك على مدار الساعة</p>
             </div>
-          </div>
+            
+            <div class="contact-content">
+                <div class="contact-methods fade-in-up">
+                    <a href="https://wa.me/213549419390" class="contact-method" target="_blank">
+                        <div class="contact-icon whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h4>واتساب</h4>
+                            <p>0549419390</p>
+                        </div>
+                    </a>
+                    
+                    <a href="https://www.facebook.com/profile.php?id=61580854513363" class="contact-method" target="_blank">
+                        <div class="contact-icon messenger">
+                            <i class="fab fa-facebook-messenger"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h4>ماسنجر</h4>
+                            <p>راسلنا عبر فيسبوك</p>
+                        </div>
+                    </a>
+                    
+                    <a href="tel:0549419390" class="contact-method">
+                        <div class="contact-icon phone">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h4>اتصل بنا</h4>
+                            <p>0549 41 93 90</p>
+                        </div>
+                    </a>
+                    
+                    <a href="mailto:promaildzaier@gmail.com" class="contact-method">
+                        <div class="contact-icon email">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h4>البريد الإلكتروني</h4>
+                            <p>promaildzaier@gmail.com</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="contact-cta fade-in-up">
+                    <h3>جاهز لبدء مشروعك؟</h3>
+                    <p>تواصل معنا الآن واحصل على استشارة مجانية وعرض سعر مخصص لبحثك</p>
+                    <a href="https://wa.me/213549419390" class="btn btn-outline" target="_blank">
+                        <i class="fab fa-whatsapp"></i> ابدأ الآن عبر واتساب
+                    </a>
+                    
+                    <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2);">
+                        <h4 style="margin-bottom: 1rem;">ساعات العمل</h4>
+                        <p style="opacity: 0.9;">متاحون 24/7 - نرد على استفساراتك في أسرع وقت</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-logo">
-          <img src="https://i.ibb.co/mCvhd6s/astra-logo.png" alt="Astra Logo" />
-          <span>Astra</span>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://i.ibb.co/mCvhd6s/astra-logo.png" alt="Astra Logo">
+                <span>Astra</span>
+            </div>
+            <p>خدمة كتابة البحوث الجامعية بشكل احترافي - نساعدك على التميز الأكاديمي</p>
+            
+            <div class="social-links">
+                <a href="https://wa.me/213549419390" class="social-link" target="_blank" title="واتساب">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61580854513363" class="social-link" target="_blank" title="فيسبوك">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="mailto:promaildzaier@gmail.com" class="social-link" title="البريد الإلكتروني">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Astra - جميع الحقوق محفوظة</p>
+            </div>
         </div>
-        <p>
-          خدمة كتابة البحوث الجامعية بشكل احترافي - نساعدك على التميز الأكاديمي
-        </p>
-
-        <div class="social-links">
-          <a
-            href="https://wa.me/213549419390"
-            class="social-link"
-            target="_blank"
-            title="واتساب"
-          >
-            <i class="fab fa-whatsapp"></i>
-          </a>
-          <a
-            href="https://www.facebook.com/profile.php?id=61580854513363"
-            class="social-link"
-            target="_blank"
-            title="فيسبوك"
-          >
-            <i class="fab fa-facebook"></i>
-          </a>
-          <a
-            href="mailto:promaildzaier@gmail.com"
-            class="social-link"
-            title="البريد الإلكتروني"
-          >
-            <i class="fas fa-envelope"></i>
-          </a>
-        </div>
-
-        <div class="footer-bottom">
-          <p>&copy; 2024 Astra - جميع الحقوق محفوظة</p>
-        </div>
-      </div>
     </footer>
 
     <!-- Floating Contact Buttons -->
     <div class="floating-contacts">
-      <a
-        href="https://wa.me/213549419390"
-        class="floating-btn whatsapp"
-        target="_blank"
-        title="واتساب"
-      >
-        <i class="fab fa-whatsapp"></i>
-      </a>
-      <a
-        href="https://www.facebook.com/profile.php?id=61580854513363"
-        class="floating-btn messenger"
-        target="_blank"
-        title="ماسنجر"
-      >
-        <i class="fab fa-facebook-messenger"></i>
-      </a>
+        <a href="https://wa.me/213549419390" class="floating-btn whatsapp" target="_blank" title="واتساب">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61580854513363" class="floating-btn messenger" target="_blank" title="ماسنجر">
+            <i class="fab fa-facebook-messenger"></i>
+        </a>
     </div>
 
     <!-- JavaScript -->
     <script>
-      // Mobile Menu Toggle
-      const menuToggle = document.getElementById("menuToggle");
-      const navMenu = document.getElementById("navMenu");
-
-      menuToggle.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-      });
-
-      // Close menu when clicking on a link
-      document.querySelectorAll(".nav-menu a").forEach((link) => {
-        link.addEventListener("click", () => {
-          navMenu.classList.remove("active");
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
         });
-      });
-
-      // Navbar scroll effect
-      const navbar = document.getElementById("navbar");
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 50) {
-          navbar.classList.add("scrolled");
-        } else {
-          navbar.classList.remove("scrolled");
-        }
-      });
-
-      // Smooth scroll for anchor links
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute("href"));
-          if (target) {
-            target.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
             });
-          }
         });
-      });
-
-      // Intersection Observer for fade-in animations
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px",
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
-          }
+        
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
         });
-      }, observerOptions);
-
-      // Observe all fade-in elements
-      document.querySelectorAll(".fade-in-up").forEach((el) => {
-        el.style.opacity = "0";
-        el.style.transform = "translateY(30px)";
-        el.style.transition = "all 0.6s ease-out";
-        observer.observe(el);
-      });
-
-      // Add stagger effect to grid items
-      document
-        .querySelectorAll(
-          ".features-grid .feature-card, .services-grid .service-card, .pricing-grid .pricing-card, .portfolio-grid .portfolio-item, .testimonials-grid .testimonial-card",
-        )
-        .forEach((card, index) => {
-          card.style.transitionDelay = `${index * 0.1}s`;
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // PDF Modal Functions
+        function openPDF(pdfPath, title) {
+            const modal = document.getElementById('pdfModal');
+            const viewer = document.getElementById('pdfViewer');
+            const modalTitle = document.getElementById('modalTitle');
+            
+            modalTitle.textContent = title;
+            viewer.src = pdfPath + '#toolbar=0&navpanes=0&scrollbar=0';
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closePDF() {
+            const modal = document.getElementById('pdfModal');
+            const viewer = document.getElementById('pdfViewer');
+            
+            modal.classList.remove('active');
+            viewer.src = '';
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Close modal when clicking outside
+        document.getElementById('pdfModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closePDF();
+            }
+        });
+        
+        // Close modal with ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closePDF();
+            }
+        });
+        
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in-up').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+        
+        // Add stagger effect to grid items
+        document.querySelectorAll('.features-grid .feature-card, .services-grid .service-card, .pricing-grid .pricing-card, .portfolio-grid .portfolio-item, .testimonials-grid .testimonial-card').forEach((card, index) => {
+            card.style.transitionDelay = `${index * 0.1}s`;
         });
     </script>
-  </body>
+</body>
 </html>
